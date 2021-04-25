@@ -13,7 +13,7 @@ app = Flask('__name__')
 
 @app.route("/")
 def loadPage():
-	return render_template('home_flask.html', query="")
+	return render_template('home_heroku.html', query="")
 
 @app.route("/", methods=['POST'])
 def Admission_Prediction():
@@ -36,6 +36,6 @@ def Admission_Prediction():
     result = f'Chances of Admit is : {a} %'
     error = 'Accuracy of the prediction: 81.88% (referred from r2_score)' # From r2_score
     
-    return render_template('home_flask.html', output1=result, output2=error, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'],query7 = request.form['query7'])
+    return render_template('home_heroku.html', output1=result, output2=error, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'],query7 = request.form['query7'])
     
 app.run()
