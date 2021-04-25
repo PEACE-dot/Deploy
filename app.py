@@ -12,11 +12,11 @@ import pickle
 app = Flask('__name__')
 q = ""
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def loadPage():
 	return render_template('home_heroku.html', query="")
 
-@app.route("/Admission_Prediction", methods=['GET', 'POST'])
+@app.route("/Admission_Prediction", methods=['POST'])
 def Admission_Prediction():
 
     inputQuery1 = request.form['query1']
