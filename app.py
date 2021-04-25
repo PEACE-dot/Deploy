@@ -16,7 +16,7 @@ q = ""
 def loadPage():
 	return render_template('home_heroku.html', query="")
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/Admission_Prediction", methods=['GET', 'POST'])
 def Admission_Prediction():
 
     inputQuery1 = request.form['query1']
@@ -40,4 +40,4 @@ def Admission_Prediction():
     return render_template('home_heroku.html', output1=result, output2=error, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'],query7 = request.form['query7'])
     
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
