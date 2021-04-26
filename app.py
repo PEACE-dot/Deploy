@@ -16,8 +16,8 @@ q = ""
 def loadPage():
 	return render_template('home_heroku.html', query="")
 
-@app.route("/Admission_Prediction", methods=['POST'])
-def Admission_Prediction():
+@app.route("/predict", methods=['POST'])
+def predict():
 
     inputQuery1 = request.form['query1']
     inputQuery2 = request.form['query2']
